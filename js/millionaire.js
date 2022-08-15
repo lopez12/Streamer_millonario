@@ -66,14 +66,30 @@ var MillionaireModel = function(data) {
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
- 		return self.questions[self.level() - 1].question;
+		$("#question-text").hide();
+		setTimeout(() => {  $("#question-text").fadeIn(2000); }, 8000);
+		return self.questions[self.level() - 1].question;
  	}
 
  	// Gets the answer text of a specified question index (0-3)
  	// from the current question
  	self.getAnswerText = function(index) {
+		 // show answers
+		self.fadeanswers();
  		return self.questions[self.level() - 1].content[index];
  	}
+
+	//
+	self.fadeanswers = function(index) {
+		$("#answer-one").hide();
+		$("#answer-two").hide();
+		$("#answer-three").hide();
+		$("#answer-four").hide();
+		setTimeout(() => {  $("#answer-one").fadeIn(2000); }, 10000);
+		setTimeout(() => {  $("#answer-two").fadeIn(2000); }, 12000);
+		setTimeout(() => {  $("#answer-three").fadeIn(2000); }, 14000);
+		setTimeout(() => {  $("#answer-four").fadeIn(2000); }, 16000);
+	}
 
  	// Uses the fifty-fifty option of the user
  	self.fifty = function(item, event) {
@@ -110,6 +126,7 @@ var MillionaireModel = function(data) {
  		if(self.transitioning)
  			return;
  		self.transitioning = true;
+		
  		if(self.questions[self.level() - 1].correct == index) {
  			self.rightAnswer(elm);
  		} else {
@@ -133,10 +150,6 @@ var MillionaireModel = function(data) {
  				} else {
  					self.level(self.level() + 1);
  					$("#" + elm).css('background', 'none');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
 			 		self.transitioning = false;
  				}
  			});
@@ -159,6 +172,7 @@ var MillionaireModel = function(data) {
 
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
+		self.fadeanswers();
 	    return self.money().money(2, '.', ',');
 	}
 };
