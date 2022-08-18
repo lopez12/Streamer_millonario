@@ -33,7 +33,7 @@ Each array of questions is in the following format.
 2.  The question prompt text is located in the key "question"
 3.  The zero-based index of the value in "content" that is the correct answer is located in the key "correct"
 
-````json
+```json
         {
             "question" : "What is Aurora Borealis commonly known as?",
             "content" : [
