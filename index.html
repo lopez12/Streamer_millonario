@@ -27,7 +27,7 @@ Author: Aaron Nech
         <!-- The actual game markup -->
         <div id="game">
             <div id="top">
-                <img src="img/logo.jpg" id="logo">
+                <img src="img/logo.png" id="logo">
                 <ul id="levels">
                     <li data-bind="css: {active: level() == 15}" data-amt="10000" data-lvl="15">10,000</li>
                     <li data-bind="css: {active: level() == 14}" data-amt="5000" data-lvl="14">5,000</li>
@@ -50,14 +50,13 @@ Author: Aaron Nech
             <div id="options">
                 <div id="fifty" class="options-button" data-bind="click: fifty"></div>
                 <div id="phone-friend" class="options-button" data-bind="click: fadeOutOption"></div>
-                <div id="audience" class="options-button" data-bind="click: fadeOutOption"></div>
+                <div id="audience" src="img/audience.png" class="options-button" data-bind="click: fadeOutOption"></div>
                 <div id="money">
-                    $
+                    <img src="https://d3aqoihi2n8ty8.cloudfront.net/actions/cheer/light/animated/100/4.gif" id ="bits-image">
                     <span data-bind="text: formatMoney()"></span>
                 </div>
             </div>
             <div id="question-box">
-                <span class="big-text">Q:</span>
                 <span id="question-text" class="content" data-bind="text: getQuestionText()"></span>
             </div>
             <div id="answer-box">

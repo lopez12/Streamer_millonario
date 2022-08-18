@@ -49,7 +49,7 @@ audio {
 	width: 960px;
 	margin: 0 auto;
 	padding: 10px;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 .big-text {
@@ -65,7 +65,7 @@ audio {
 	float: right;
 	display: block;
 	height: 50px;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 #logo {
@@ -95,7 +95,8 @@ audio {
 }
 
 #audience {
-	background: url('../img/audience.png') no-repeat 0 0;
+	background-image: url("../img/audience.png");
+	background-repeat: no-repeat;
 }
 
 #answer-box {
@@ -116,14 +117,21 @@ audio {
 }
 
 .options-button {
-	width: 64px;
-	height: 64px;
-	margin-left: 12px;
+	width: 100px;
+	height: 100px;
+	margin-top: -35px;
+	margin-left: 8px;
 	float: left;
 	background-position: 0 0;
 	cursor: pointer;
 }
 
 .options-button:hover {
-	background-position: 0 -64px !important;
+	background-position: 0 -100px !important;
+}
+
+#bits-image{
+	width: 30px;
+	height: 30px;
+	margin-top: -500px;
 }
