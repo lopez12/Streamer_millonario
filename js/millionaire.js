@@ -23,9 +23,9 @@ Number.prototype.money = function (fixed, decimalDelim, breakDelim) {
     i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + breakDelim) +
     (fixed
       ? decimalDelim +
-        Math.abs(n - i)
-          .toFixed(fixed)
-          .slice(2)
+      Math.abs(n - i)
+        .toFixed(fixed)
+        .slice(2)
       : "")
   );
 };
@@ -42,6 +42,14 @@ startSound = function (id, loop) {
   if (loop) soundHandle.setAttribute("loop", loop);
   soundHandle.play();
 };
+
+function show_question() {
+	setTimeout(() => { $("#question-text").fadeIn(2000); }, 1000);
+	setTimeout(() => { $("#answer-one").fadeIn(2000); }, 2000);
+	setTimeout(() => { $("#answer-two").fadeIn(2000); }, 4000);
+	setTimeout(() => { $("#answer-three").fadeIn(2000); }, 6000);
+	setTimeout(() => { $("#answer-four").fadeIn(2000); }, 8000);
+}
 
 /**
  * The View Model that represents one game of
@@ -74,9 +82,6 @@ var MillionaireModel = function (data) {
   // Grabs the question text of the current question
   self.getQuestionText = function () {
     $("#question-text").hide();
-    setTimeout(() => {
-      $("#question-text").fadeIn(2000);
-    }, 8000);
     return self.questions[self.level() - 1].question;
   };
 
@@ -89,23 +94,11 @@ var MillionaireModel = function (data) {
   };
 
   //
-  self.fadeanswers = function (index) {
+  self.fadeanswers = function () {
     $("#answer-one").hide();
     $("#answer-two").hide();
     $("#answer-three").hide();
     $("#answer-four").hide();
-    setTimeout(() => {
-      $("#answer-one").fadeIn(2000);
-    }, 10000);
-    setTimeout(() => {
-      $("#answer-two").fadeIn(2000);
-    }, 12000);
-    setTimeout(() => {
-      $("#answer-three").fadeIn(2000);
-    }, 14000);
-    setTimeout(() => {
-      $("#answer-four").fadeIn(2000);
-    }, 16000);
   };
 
   // Uses the fifty-fifty option of the user
