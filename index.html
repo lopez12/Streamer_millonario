@@ -26,24 +26,29 @@ Author: Aaron Nech
         <div id="game-over"></div>
         <!-- The actual game markup -->
         <div id="game">
+            <div style = "position:fixed; left:0px; top:0px;">
+				<button class="next-button" onclick="show_question()">Next!</button> 
+			</div>
             <div id="top">
                 <img src="img/logo.png" id="logo">
                 <ul id="levels">
-                    <li data-bind="css: {active: level() == 15}" data-amt="10000" data-lvl="15">10,000</li>
-                    <li data-bind="css: {active: level() == 14}" data-amt="5000" data-lvl="14">5,000</li>
-                    <li data-bind="css: {active: level() == 13}" data-amt="2500" data-lvl="13">2,500</li>
-                    <li data-bind="css: {active: level() == 12}" data-amt="1250" data-lvl="12">1,250</li>
-                    <li data-bind="css: {active: level() == 11}" data-amt="640" data-lvl="11">640</li>
-                    <li data-bind="css: {active: level() == 10}" data-amt="320" data-lvl="10">320</li>
-                    <li data-bind="css: {active: level() == 9}" data-amt="160" data-lvl="9">160</li>
-                    <li data-bind="css: {active: level() == 8}" data-amt="80" data-lvl="8">80</li>
-                    <li data-bind="css: {active: level() == 7}" data-amt="40" data-lvl="7">40</li>
-                    <li data-bind="css: {active: level() == 6}" data-amt="20" data-lvl="6">20</li>
-                    <li data-bind="css: {active: level() == 5}" data-amt="10" data-lvl="5">10</li>
-                    <li data-bind="css: {active: level() == 4}" data-amt="5" data-lvl="4">5</li>
-                    <li data-bind="css: {active: level() == 3}" data-amt="3" data-lvl="3">3</li>
-                    <li data-bind="css: {active: level() == 2}" data-amt="2" data-lvl="2">2</li>
-                    <li data-bind="css: {active: level() == 1}" data-amt="1" data-lvl="1">1</li>
+                    <li data-bind="css: {active: level() == 15}" data-amt="18000" data-lvl="15">18,000</li>
+					<li data-bind="css: {active: level() == 14}" data-amt="14000" data-lvl="14">14,000</li>
+					<li data-bind="css: {active: level() == 13}" data-amt="12000" data-lvl="13">12,000</li>
+					<li data-bind="css: {active: level() == 12}" data-amt="9000" data-lvl="12">9,000</li>
+					<li data-bind="css: {active: level() == 11}" data-amt="7250" data-lvl="11">7,250</li>
+					<hr>
+					<li data-bind="css: {active: level() == 10}" data-amt="5120" data-lvl="10">5,120</li>
+					<li data-bind="css: {active: level() == 9}" data-amt="3200" data-lvl="9">3,200</li>
+					<li data-bind="css: {active: level() == 8}" data-amt="2560" data-lvl="8">2,560</li>
+					<li data-bind="css: {active: level() == 7}" data-amt="1280" data-lvl="7">1,280</li>
+					<li data-bind="css: {active: level() == 6}" data-amt="640" data-lvl="6">640</li>
+					<hr>
+					<li data-bind="css: {active: level() == 5}" data-amt="320" data-lvl="5">320</li>
+					<li data-bind="css: {active: level() == 4}" data-amt="160" data-lvl="4">160</li>
+					<li data-bind="css: {active: level() == 3}" data-amt="80" data-lvl="3">80</li>
+					<li data-bind="css: {active: level() == 2}" data-amt="40" data-lvl="2">40</li>
+					<li data-bind="css: {active: level() == 1}" data-amt="20" data-lvl="1">20</li>
                 </ul>
                 <div class="clear"></div>
             </div>
